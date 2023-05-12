@@ -44,7 +44,7 @@ if (isset($_POST['register-btn']) || isset($_POST['create-admin'])) {
         if (isset($_POST['admin'])) {
             $_POST['admin'] = 1;
             $user_id = create($table, $_POST);
-            $_SESSION['message'] = 'Admin user created';
+            $_SESSION['message'] = 'Utilisateur administrateur créé';
             $_SESSION['type'] = 'success';
             header('location: ' . BASE_URL . '/admin/users/index.php'); 
             exit();
@@ -74,7 +74,7 @@ if (isset($_POST['update-user'])) {
         
         $_POST['admin'] = isset($_POST['admin']) ? 1 : 0;
         $count = update($table, $id, $_POST);
-        $_SESSION['message'] = 'Admin user created';
+        $_SESSION['message'] = 'Utilisateur administrateur créé';
         $_SESSION['type'] = 'success';
         header('location: ' . BASE_URL . '/admin/users/index.php'); 
         exit();

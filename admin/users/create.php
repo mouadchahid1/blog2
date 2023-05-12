@@ -18,10 +18,12 @@ adminOnly();
 
         <!-- Google Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Candal|Lora"
-            rel="stylesheet">
+            rel="stylesheet"> 
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
         <!-- Custom Styling -->
         <link rel="stylesheet" href="../../assets/css/style.css">
+        <link rel="stylesheet" href="/assets/">
 
         <!-- Admin Styling -->
         <link rel="stylesheet" href="../../assets/css/admin.css">
@@ -73,14 +75,18 @@ adminOnly();
                         <div>
                             <?php if (isset($admin) && $admin == 1): ?>
                                 <label>
-                                    <input type="checkbox" name="admin" checked>
+                                    <input type="checkbox" name="admin"  checked>
                                     Admin
-                                </label>
+                                </label> 
+                                <div class="form-check form-switch">
+  <input class="form-check-input" type="checkbox" role="switch"  name="admin" checked>
+  <label class="form-check-label" for="flexSwitchCheckChecked">Admin</label>
+</div>
                             <?php else: ?>
-                                <label>
-                                    <input type="checkbox" name="admin">
-                                    Admin
-                                </label>
+                                <div class="form-check form-switch">
+  <input class="form-check-input" type="checkbox" role="switch"  name="admin" >
+  <label class="form-check-label" for="flexSwitchCheckChecked">Admin</label>
+</div>
                             <?php endif; ?>
                             
                         </div>
@@ -108,6 +114,7 @@ adminOnly();
             src="https://cdn.ckeditor.com/ckeditor5/12.2.0/classic/ckeditor.js"></script>
         <!-- Custom Script -->
         <script src="../../assets/js/scripts.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
     </body>
 

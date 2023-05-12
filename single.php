@@ -10,7 +10,7 @@ $posts = selectAll('posts', ['published' => 1]);
 
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
   <meta charset="UTF-8">
@@ -20,7 +20,7 @@ $posts = selectAll('posts', ['published' => 1]);
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
     integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Candal|Lora" rel="stylesheet">
 
@@ -50,9 +50,11 @@ $posts = selectAll('posts', ['published' => 1]);
         <div class="main-content single">
           <h1 class="post-title"><?php echo $post['title']; ?></h1>
 
-          <div class="post-content">
-            <?php echo html_entity_decode($post['body']); ?>
-          </div>
+          
+          <div class="post-content" data-aos="fade-up"
+     data-aos-duration="1000">
+          <?php echo html_entity_decode($post['body']); ?>
+           </div>
 
         </div>
       </div>
@@ -112,7 +114,10 @@ $posts = selectAll('posts', ['published' => 1]);
 
   <!-- Custom Script -->
   <script src="assets/js/scripts.js"></script>
-
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+  AOS.init();
+</script>
 </body>
 
 </html>

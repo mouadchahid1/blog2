@@ -7,7 +7,7 @@
     <ul class="nav">
       <li><a href="<?php echo BASE_URL . '/index.php' ?>">Acceuil</a></li>
       <li><a href="#">Create</a></li>
-      <li><a href="#">Services</a></li>
+      <li><a href="#footer">Services</a></li>
 
       <?php if (isset($_SESSION['id'])): ?>
         <li>
